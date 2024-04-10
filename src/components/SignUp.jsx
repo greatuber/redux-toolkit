@@ -28,7 +28,7 @@ function SignUp() {
       <MDBRow className='g-0 align-items-center' style={{width:"80%"}}>
         <MDBCol col='6'>
 
-          <MDBCard className='my-5 cascading-right' style={{background: 'white', borderRadius:"100px 0 0 100px"}}>
+          <MDBCard className='my-5 cascading-right' style={{backgroundColor: 'white', borderRadius:"100px 0 0 100px"}}>
             <MDBCardBody className='p-5 text-center'>
 
               <h2 className="fw-bold mb-5">Sign up now</h2>
