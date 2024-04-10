@@ -1,13 +1,192 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 20px;
+  background: #a59be3;
+  -ms-overflow-style: none; 
+scrollbar-width: none; 
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body::-webkit-scrollbar {
+  display: none;
 }
+
+img {
+  height: 80px;
+  weight: 80px
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  display: grid;
+  box-shadow: 0px 1px 10px 4px black;
+
+}
+
+.productsWrapper {
+  display: grid;
+  grid-template-columns:1ft 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  background: #8e63d2;
+  padding: 10px 10px;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: inset 1px 2px 10px 6px #51347e;
+  
+}
+
+.btn:hover {
+  /* background: #4c2885; */
+  box-shadow: inset -1px 0px 20px 10px #090212;
+}
+
+.heading {
+  padding: 25px 0;
+}
+
+.cartCount {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: 40px;
+}
+
+.navLink {
+  text-decoration: none;
+  color: black;
+  margin-left: 20px;
+}
+
+.navLink:hover {
+  color: #72169f;
+}
+
+.navLink:: {
+  color: red;
+}
+
+.cartCard {
+  /* display: flex; */
+  align-items: center;
+  justify-items: center;
+  background: #fff;
+  margin-bottom: 20px;
+  padding: 14px;
+  border-radius: 5px;
+  box-shadow: 0px 1px 10px 4px black;
+  display: grid;
+  grid-template-columns: 0.25fr  1fr 1fr 1fr 1fr;
+}
+
+select {
+  color: white;
+    background: #8e63d2;
+    padding: 10px;
+    border-radius: 10px;
+    font-size:22px;
+    box-shadow: inset 1px 2px 10px 6px #51347e;
+
+}
+
+.logo {
+  box-shadow: 3px 8px 9px 2px #563985;
+  border-radius:50%;
+  padding: 2px
+}
+
+.btn-category{
+  border: none;
+  outline: none;
+  background: #8e63d2;
+  padding: 15px 15px;
+  color: #fff;
+  border-radius: 20px;
+  font-weight: 900;
+  font-size: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: inset 1px 2px 10px 6px #51347e;
+  margin:10px
+}
+
+.btn-category:hover{
+  background: red
+}
+
+.Purchase {
+  display: grid;
+  /* margin: 100px 500px 0px 500px; */
+  grid-template-columns: 1fr 1fr 1fr;
+  width:70%;
+  align-items: center;
+  justify-items: center;
+  color: black;
+  background: #fff;
+  margin-bottom: 20px;
+  padding: 14px;
+  border-radius: 1.5rem;
+  background: white; 
+  box-shadow: 0px 1px 10px 4px black;
+  position: fixed;
+  bottom: 2rem;
+
+}
+
+.qty{
+      /* float: right; */
+      margin-top: -10px;
+      margin-left: 80px;
+      display: flex;
+      font-size: 1.5rem;
+      background-color: red;
+      color: white;
+      width: 35%;
+      justify-content: center;
+      border-radius:50%;
+  
+}
+
+.example {
+  /* height: "50vh", overflowY: "scroll", WebkitScrollSnapType:"none" */
+  height:50vh;
+  overflow-y: scroll;
+  padding:1rem;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.example::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.example {
+-ms-overflow-style: none; 
+scrollbar-width: none;  
+}
+
+
+
+.frame{
+    padding: 5px;
+    background-color: #6a47a1;
+    border-radius: 10px;
+}
+
+
+
+
+
