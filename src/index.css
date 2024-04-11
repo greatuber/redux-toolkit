@@ -7,9 +7,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   padding: 20px;
   background: #a59be3;
-  -ms-overflow-style: none; 
-scrollbar-width: none; 
+  /* -ms-overflow-style: none;  */
+/* scrollbar-width: none;  */
 font-family: Roboto, Helvetica, Arial, sans-serif;
+  overflow: scroll;
+  height: 100vh;
 }
 
 
@@ -20,7 +22,7 @@ body::-webkit-scrollbar {
 
 img {
   height: 80px;
-  weight: 80px
+  weight: 80px;
 }
 
 .card {

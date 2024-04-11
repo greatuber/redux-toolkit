@@ -38,6 +38,10 @@ const Cart = () => {
     navigate("/selectCart");
   };
 
+  const handlePlaceOrder = () => {
+    navigate('/signin')
+  }
+
   if (cartProducts.length === 0) {
     return (
       <>
@@ -152,7 +156,7 @@ const Cart = () => {
           <div className="Purchase">
             <h1>No of Iteams: {totalItems}</h1>
             <h1>Total Price: ${totalAmount}</h1>
-            <button className="btn" style={{ fontSize: "1.5rem", background:"red"}}>
+            <button  className="btn" style={{ fontSize: "1.5rem", background:"red"}} onClick={() => handlePlaceOrder()}>
               Place Order
             </button>
           </div>

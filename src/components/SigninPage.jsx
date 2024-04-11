@@ -10,7 +10,12 @@ import {
 }
 from 'mdb-react-ui-kit';
 
+import {useNavigate} from 'react-router-dom'
+
 function Signin() {
+
+  const navigate =   useNavigate()
+
   return (
    
     <MDBContainer fluid className="p-3 my-5 " style={{height:"80vh", display:"flex", justifyContent:"center", alignItems:"center"}} >
@@ -26,8 +31,8 @@ function Signin() {
         <MDBCol col='1' md='6' style={{display:"grid", marginTop:"2rem"}} >
 
         
-          <MDBInput wrapperClass='mb-4' label='Email address' id='formControlLg' type='email' size="lg"/>
-          <MDBInput wrapperClass='mb-4' label='Password' id='formControlLg' type='password' size="lg"/>
+          <MDBInput wrapperClass='mb-4'style={{fontSize:"xx-large"}} label='Email address' id='formControlLg' type='email' size="lg"/>
+          <MDBInput wrapperClass='mb-4'style={{fontSize:"xx-large"}} label='Password' id='formControlLg' type='password' size="lg"/>
 
 
           <div className="d-flex justify-content-between mx-4 mb-4">
@@ -35,11 +40,11 @@ function Signin() {
             <a href="!#">Forgot password?</a>
           </div>
 
-          <MDBBtn className="mb-4 w-100" size="lg">Sign in</MDBBtn>
+          <button onClick={() => navigate('/')}  className="mb-4 w-100" size="lg" style={{background:"black", color:"white"}}>Sign in</button>
 
-          <MDBBtn className="mb-4 w-100" size="lg" style={{backgroundColor: '#3b5998'}}>
+          <button onClick={() => navigate('/signup') } className="mb-4 w-100" size="lg" style={{backgroundColor: '#3b5998', color:"white"}}>
             Continue with Sign up
-          </MDBBtn>
+          </button>
 
           {/* <MDBBtn className="mb-4 w-100" size="lg" style={{backgroundColor: '#55acee'}}>
             <MDBIcon fab icon="twitter" className="mx-2"/>

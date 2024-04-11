@@ -1,5 +1,7 @@
 import React from 'react';
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
+
+
 
 import {
   MDBBtn,
@@ -12,15 +14,11 @@ import {
   MDBCol,
   MDBCheckbox
 }
-
-
 from 'mdb-react-ui-kit';
 
 function SignUp() {
 
   const navigate = useNavigate()
-
-  
 
   return (
     <MDBContainer fluid className='my-5' style={{width:"100%", display:"flex", justifyContent:"center"}}>
@@ -50,9 +48,8 @@ function SignUp() {
                 <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Subscribe to our newsletter' />
               </div>
 
-              <button style={{width:"100%", border:"none", background:"none"}} onClick={() => navigate('/signup')}>
-
-              <MDBBtn className='w-100 mb-4' size='md'>sign up</MDBBtn>
+              <button style={{width:"100%", background:" black", color:"white", padding:"1rem"}} onClick={() => navigate('/signin')}>
+                Sign Up
               </button>
 
               <div className="text-center">
