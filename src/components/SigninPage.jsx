@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
-import React from 'react';
+import React, { useState } from 'react';
 import {
   MDBContainer,
   MDBCol,
@@ -11,10 +11,27 @@ import {
 from 'mdb-react-ui-kit';
 
 import {useNavigate} from 'react-router-dom'
+import { useFirebaseAuth } from '../Firebase/Context/FirebaseContext';
 
 function Signin() {
 
+
+  const [email, setEmail] = useState('')
+  const [passwd, setPasswd] = useState('')
+
   const navigate =   useNavigate()
+
+
+  const firebaseSignIn = useFirebaseAuth()
+  // console.log(firebaseSignIn);
+
+  const handleSignIn = () => {
+    firebaseSignIn.signIn(email, passwd)
+    .then(() => 
+    navigate('/')
+  ).catch(() => alert(`invalid  ${email}`)
+  )
+  }
 
   return (
    
@@ -31,8 +48,8 @@ function Signin() {
         <MDBCol col='1' md='6' style={{display:"grid", marginTop:"2rem"}} >
 
         
-          <MDBInput wrapperClass='mb-4'style={{fontSize:"xx-large"}} label='Email address' id='formControlLg' type='email' size="lg"/>
-          <MDBInput wrapperClass='mb-4'style={{fontSize:"xx-large"}} label='Password' id='formControlLg' type='password' size="lg"/>
+          <MDBInput onChange={(e) => setEmail(e.target.value)} wrapperClass='mb-4'style={{fontSize:"xx-large"}} label='Email address' id='formControlLg' type='email' size="lg"/>
+          <MDBInput onChange={(e) => setPasswd(e.target.value)} wrapperClass='mb-4'style={{fontSize:"xx-large"}} label='Password' id='formControlLg' type='password' size="lg"/>
 
 
           <div className="d-flex justify-content-between mx-4 mb-4">
@@ -40,9 +57,9 @@ function Signin() {
             <a href="!#">Forgot password?</a>
           </div>
 
-          <button onClick={() => navigate('/')}  className="mb-4 w-100" size="lg" style={{background:"black", color:"white"}}>Sign in</button>
+          <button onClick={() => handleSignIn()}  className="mb-4 w-100" size="lg" style={{background:"black", color:"white"}}>Sign in</button>
 
-          <button onClick={() => navigate('/signup') } className="mb-4 w-100" size="lg" style={{backgroundColor: '#3b5998', color:"white"}}>
+          <button onClick={() =>navigate('/signup') } className="mb-4 w-100" size="lg" style={{backgroundColor: '#3b5998', color:"white"}}>
             Continue with Sign up
           </button>
 
